@@ -1,0 +1,98 @@
+:root {
+  --color-background-body: #000;
+  --color-background-calculator: #ea2027;
+  --color-button-number: #fff;
+  --color-button-gold: #f79f1f;
+  --color-button-red: #aa0505;
+
+  --border-radius-button: 5px;
+
+  --box-shadow-button: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background-body);
+  text-align: center;
+}
+
+.calculator {
+  width: 300px;
+  height: 350px;
+  margin: 100px auto;
+  background-color: var(--color-background-calculator);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: rgb(29, 28, 28) -10px -10px 20px;
+}
+
+.calculator .show {
+  width: 100%;
+  flex-basis: 15%;
+}
+
+.calculator .show input {
+  width: 80%;
+  height: 40px;
+  outline: none;
+  border: solid 1px var(--color-background-body);
+  border-radius: 5px;
+  font-size: 20px;
+  direction: rtl;
+  padding: 0 5px;
+}
+
+.calculator section .btn {
+  width: 100%;
+}
+
+.calculator section .btn button {
+  width: 40px;
+  height: 40px;
+  margin: 3px 3px;
+  border-radius: var(--border-radius-button);
+  border: none;
+  background-color: var(--color-background-body);
+  color: var(--color-button-number);
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-button);
+}
+
+.gold {
+  --color-button-number: var(--color-button-gold);
+}
+
+.red {
+  --color-button-number: var(--color-button-red);
+}
+
+.circle {
+  --color-background-body: var(--color-button-gold);
+  --border-radius-button: 50%;
+  --color-button-number: #000;
+  padding: 10px;
+}
+
+.active {
+  --box-shadow-button: none;
+  --color-button-number: #ffff00;
+}
